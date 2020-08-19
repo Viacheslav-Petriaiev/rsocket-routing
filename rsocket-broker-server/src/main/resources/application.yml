@@ -1,0 +1,15 @@
+server:
+  port: 8064
+
+spring:
+  application:
+    name: rsocket-broker-server
+
+io.rsocket.routing.broker:
+  broker-id: 00000000-0000-0000-0000-000000000011
+  tcp.port: 8002
+  cluster.port: 7002
+
+logging:
+  level:
+    io.rsocket.routing.broker: DEBUG

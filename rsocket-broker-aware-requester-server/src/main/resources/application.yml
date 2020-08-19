@@ -1,0 +1,23 @@
+server:
+  port: 8065
+
+spring:
+  application:
+    name: rsocket-broker-aware-requester-server
+
+
+io.rsocket.routing.client:
+  route-id: 00000000-0000-0000-0000-000000000001
+  service-name: rsocket-broker-aware-requester-server
+  tags:
+    INSTANCE_NAME: rsocket-broker-aware-requester-server-1
+  address:
+    getUserById:
+      service_name: rsocket-broker-aware-responder-server
+  brokers:
+    - host: localhost
+      port: 8002
+
+logging:
+  level:
+    io.rsocket.routing.client: INFO

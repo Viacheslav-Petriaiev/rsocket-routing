@@ -1,0 +1,19 @@
+server:
+  port: 8066
+
+spring:
+  application:
+    name: rsocket-broker-aware-responder-server
+
+io.rsocket.routing.client:
+  route-id: 00000000-0000-0000-0000-000000000003
+  service-name: rsocket-broker-aware-responder-server
+  tags:
+    INSTANCE_NAME: rsocket-broker-aware-responder-server-1
+  brokers:
+    - host: localhost
+      port: 8002
+
+logging:
+  level:
+    io.rsocket.routing.client: DEBUG
