@@ -6,7 +6,6 @@ spring:
     name: rsocket-broker-server
 
 io.rsocket.routing.broker:
-#  broker-id: 00000000-0000-0000-0000-000000000011
   websocket:
     enabled: true
     port: 9002
